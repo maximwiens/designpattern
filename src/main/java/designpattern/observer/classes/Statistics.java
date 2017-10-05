@@ -29,7 +29,8 @@ public class Statistics implements Observer, ShowElement {
     public void show() {
         final Double mit = this.tempList.stream().mapToDouble(a -> a).average().getAsDouble();
         final float[] max = new float[1];
-        final float min = this.tempList.stream().min(Comparator.naturalOrder()).get();
+        final float[] min = new float[1];
+        this.tempList.stream().min(Comparator.naturalOrder()).ifPresent(o -> min[0] = o);
         this.tempList.stream().max(Comparator.naturalOrder()).ifPresent(o -> max[0] = o);
         System.out.println("Mit/Max/Min Temparatur = "
                 + mit + "/" + max[0] + "/" + min);
