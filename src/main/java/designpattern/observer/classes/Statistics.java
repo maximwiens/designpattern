@@ -33,7 +33,6 @@ public class Statistics implements Observer, ShowElement {
         final float[] min = new float[1];
         this.tempList.stream().min(Comparator.naturalOrder()).ifPresent(o -> min[0] = o);
         this.tempList.stream().max(Comparator.naturalOrder()).ifPresent(o -> max[0] = o);
-        logger.info("Mit/Max/Min Temparatur = "
-                + mit + "/" + max[0] + "/" + min[0]);
+        logger.info(()->"Mit/Max/Min Temparatur = " + mit + "/" + max[0] + "/" + min[0]);
     }
 }
