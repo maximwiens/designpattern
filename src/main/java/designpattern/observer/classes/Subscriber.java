@@ -14,7 +14,7 @@ public class Subscriber implements Observer, ShowElement {
 
     public Subscriber(WeatherData weatherData) {
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        this.weatherData.registerObserver(this);
     }
 
     @Override

@@ -15,7 +15,7 @@ public class Statistics implements Observer, ShowElement {
 
     public Statistics(WeatherData weatherData) {
         this.tempList = new ArrayList<>();
-        weatherData.registerObserver(this);
+        this.weatherData.registerObserver(this);
         this.weatherData = weatherData;
 
     }
