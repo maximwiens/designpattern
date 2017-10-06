@@ -26,6 +26,6 @@ public class Subscriber implements Observer, ShowElement {
 
     @Override
     public void show() {
-        logger.info("Aktuelle Wetterbedingungen: " + temp + " Grad C und " + hum + "% Feuchtigkeit");
+        logger.info(()->"Aktuelle Wetterbedingungen: " + temp + " Grad C und " + hum + "% Feuchtigkeit");
     }
 }
